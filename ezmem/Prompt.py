@@ -1,4 +1,4 @@
-class promet():
+class prompt():
 
    abstraction = '''
 你是存储记忆的大师，你将要从用户的对话中寻找值得记忆的要素并且精简语言

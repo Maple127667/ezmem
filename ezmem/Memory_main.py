@@ -1,5 +1,5 @@
 from .deepseek import get_chat_messages
-from .Promet import promet
+from .Prompt import prompt
 import sqlite3
 from openai import OpenAI
 
@@ -44,7 +44,7 @@ class EasyMemory():
         :return: 简化后的内容，如果不需要记忆则返回"None"。
         :rtype: str
         """
-        ans = get_chat_messages(text_input, rule=promet.abstraction, client=self.client)
+        ans = get_chat_messages(text_input, rule=prompt.abstraction, client=self.client)
         ans = ans.choices[0].message.content
         return ans
 
@@ -61,7 +61,7 @@ class EasyMemory():
         """
         ans = get_chat_messages(
             f"old_memory: {old_mem}\nnew_memory: {new_mem}", 
-            rule=promet.optimized_instruction,
+            rule=prompt.optimized_instruction,
             client=self.client
         )
         ans = ans.choices[0].message.content
@@ -163,8 +163,8 @@ class EasyMemory():
         """
         与AI进行聊天交互。
 
-        :param promet: 聊天提示信息。
-        :type promet: str
+        :param prompt: 聊天提示信息。
+        :type prompt: str
         :param rule: 聊天规则。
         :type rule: str
         """
