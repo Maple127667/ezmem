@@ -5,6 +5,10 @@
 pip install ezmem
 ```
 ## 功能示例  
+### 搭建示例
+<img src="./images/pic1.jpg" alt="Example 1" width="800" />  
+
+### 效果展示
 <div style="display: flex; justify-content: space-around; align-items: center;">
   <img src="./images/example1.jpg" alt="Example 1" width="300"/>
   <img src="./images/example2.jpg" alt="Example 2" width="300"/>
